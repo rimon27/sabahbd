@@ -1,0 +1,1372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Happy Birthday, Samintha Saba 💕</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --pink-soft: #f9c6d0;
+    --pink-mid: #f2a0b8;
+    --pink-deep: #e07898;
+    --purple-soft: #d9b8f0;
+    --purple-mid: #b890e0;
+    --purple-deep: #9060c8;
+    --cream: #fff8f5;
+    --white: #ffffff;
+    --text-dark: #3a2a35;
+    --text-mid: #7a5a6a;
+    --glass-bg: rgba(255,255,255,0.35);
+    --glass-border: rgba(255,255,255,0.6);
+    --shadow: 0 8px 32px rgba(180,100,140,0.15);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--text-dark);
+    overflow-x: hidden;
+    max-width: 430px;
+    margin: 0 auto;
+  }
+
+  /* ── FLOATING PARTICLES ── */
+  #particles {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+  }
+
+  .particle {
+    position: absolute;
+    font-size: 14px;
+    opacity: 0;
+    animation: floatUp linear infinite;
+  }
+
+  @keyframes floatUp {
+    0%   { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+    10%  { opacity: 0.7; }
+    90%  { opacity: 0.4; }
+    100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+  }
+
+  /* ── MUSIC BUTTON ── */
+  #music-btn {
+    position: fixed;
+    top: 16px; right: 16px;
+    z-index: 999;
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    border: 1.5px solid var(--glass-border);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s;
+  }
+  #music-btn:active { transform: scale(0.9); }
+
+  /* ── SECTIONS ── */
+  section {
+    position: relative;
+    z-index: 1;
+    padding: 0;
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* ── HERO ── */
+  #hero {
+    background: linear-gradient(160deg, #fce4ec 0%, #f8bbcf 40%, #e1bee7 100%);
+    text-align: center;
+    padding: 60px 28px;
+    gap: 24px;
+    overflow: hidden;
+  }
+
+  .hero-date {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--purple-deep);
+    opacity: 0;
+    animation: fadeDown 0.8s 0.3s forwards;
+  }
+
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 46px;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.15;
+    color: var(--text-dark);
+    opacity: 0;
+    animation: fadeDown 0.8s 0.6s forwards;
+  }
+
+  .hero-title span { color: var(--pink-deep); }
+
+  .hero-sub {
+    font-size: 14px;
+    color: var(--text-mid);
+    line-height: 1.7;
+    max-width: 300px;
+    opacity: 0;
+    animation: fadeDown 0.8s 0.9s forwards;
+  }
+
+  .hero-heart {
+    font-size: 60px;
+    opacity: 0;
+    animation: fadeDown 0.8s 0.1s forwards, pulse 2s 1s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.12); }
+  }
+
+  .btn-start {
+    margin-top: 12px;
+    padding: 14px 36px;
+    border-radius: 50px;
+    border: none;
+    background: linear-gradient(135deg, var(--pink-deep), var(--purple-mid));
+    color: white;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: 0 6px 24px rgba(180,100,140,0.35);
+    opacity: 0;
+    animation: fadeDown 0.8s 1.2s forwards;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .btn-start:active { transform: scale(0.96); box-shadow: none; }
+
+  @keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── GLASS CARD ── */
+  .glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1.5px solid var(--glass-border);
+    border-radius: 24px;
+    padding: 28px 24px;
+    box-shadow: var(--shadow);
+    width: 100%;
+  }
+
+  /* ── SECTION WRAPPER ── */
+  .sec-wrap {
+    width: 100%;
+    padding: 70px 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+    min-height: 100svh;
+    justify-content: center;
+  }
+
+  .sec-label {
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--purple-deep);
+    opacity: 0.7;
+  }
+
+  .sec-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    font-style: italic;
+    font-weight: 300;
+    text-align: center;
+    line-height: 1.2;
+    color: var(--text-dark);
+  }
+
+  .sec-body {
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--text-mid);
+    text-align: center;
+  }
+
+  /* ── REVEAL ANIMATION ── */
+  .reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ── STORY SECTION ── */
+  #story {
+    background: linear-gradient(180deg, #fce4ec 0%, #f3e5f5 100%);
+  }
+
+  .quote-mark {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 80px;
+    color: var(--pink-mid);
+    line-height: 0.5;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  /* ── REASONS SECTION ── */
+  #reasons {
+    background: linear-gradient(180deg, #f3e5f5 0%, #fce4ec 100%);
+  }
+
+  .reasons-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    width: 100%;
+  }
+
+  .reason-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    border: 1.5px solid var(--glass-border);
+    border-radius: 20px;
+    padding: 20px 16px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    transition: transform 0.3s;
+  }
+  .reason-card:active { transform: scale(0.96); }
+
+  .reason-icon { font-size: 28px; }
+
+  .reason-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    font-style: italic;
+    color: var(--text-dark);
+  }
+
+  .reason-text {
+    font-size: 12px;
+    color: var(--text-mid);
+    line-height: 1.5;
+  }
+
+  /* ── RESPECT SECTION ── */
+  #respect {
+    background: linear-gradient(180deg, #fce4ec 0%, #e8eaf6 100%);
+  }
+
+  .respect-line {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(180,100,140,0.12);
+  }
+  .respect-line:last-child { border-bottom: none; }
+
+  .respect-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--pink-deep), var(--purple-mid));
+    flex-shrink: 0;
+  }
+
+  .respect-text {
+    font-size: 15px;
+    color: var(--text-mid);
+    line-height: 1.6;
+  }
+
+  /* ── LOVE MOST ── */
+  #lovemost {
+    background: linear-gradient(180deg, #e8eaf6 0%, #fce4ec 100%);
+    text-align: center;
+  }
+
+  .love-item {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-style: italic;
+    color: var(--text-dark);
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(180,100,140,0.15);
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .love-item.visible { opacity: 1; transform: translateX(0); }
+  .love-item:nth-child(2) { transition-delay: 0.1s; }
+  .love-item:nth-child(3) { transition-delay: 0.2s; }
+  .love-item:nth-child(4) { transition-delay: 0.3s; }
+  .love-item:nth-child(5) { transition-delay: 0.4s; }
+  .love-item:last-child { border-bottom: none; }
+
+  /* ── IMAGE FRAME ── */
+  .img-frame {
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 12px 40px rgba(180,100,140,0.25);
+    border: 3px solid var(--glass-border);
+  }
+
+  .img-frame img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .img-caption {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    background: linear-gradient(transparent, rgba(60,20,40,0.65));
+    color: white;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 17px;
+    padding: 30px 20px 18px;
+    text-align: center;
+  }
+
+  /* ── GALLERY ── */
+  #gallery {
+    background: linear-gradient(180deg, #fce4ec 0%, #f3e5f5 100%);
+  }
+
+  .gallery-scroll {
+    display: flex;
+    gap: 14px;
+    overflow-x: auto;
+    width: calc(100% + 44px);
+    margin-left: -22px;
+    padding: 8px 22px;
+    scrollbar-width: none;
+  }
+  .gallery-scroll::-webkit-scrollbar { display: none; }
+
+  .gallery-item {
+    flex-shrink: 0;
+    width: 200px;
+    height: 260px;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 28px rgba(180,100,140,0.2);
+    border: 2px solid var(--glass-border);
+    position: relative;
+  }
+
+  .gallery-item img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+  }
+
+  .gallery-num {
+    position: absolute;
+    top: 10px; left: 10px;
+    background: rgba(255,255,255,0.5);
+    backdrop-filter: blur(6px);
+    border-radius: 50px;
+    padding: 3px 10px;
+    font-size: 11px;
+    color: var(--text-dark);
+    font-weight: 500;
+  }
+
+  /* ── VIRTUAL ROMANCE ── */
+  #romance {
+    background: linear-gradient(180deg, #f3e5f5 0%, #fce4ec 100%);
+  }
+
+  .chat-wrap {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 4px 0;
+  }
+
+  .bubble {
+    max-width: 75%;
+    padding: 12px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    line-height: 1.5;
+    position: relative;
+  }
+
+  .bubble-her {
+    background: var(--glass-bg);
+    border: 1.5px solid var(--glass-border);
+    border-radius: 20px 20px 20px 4px;
+    align-self: flex-start;
+    color: var(--text-dark);
+    backdrop-filter: blur(10px);
+  }
+
+  .bubble-me {
+    background: linear-gradient(135deg, var(--pink-deep), var(--purple-mid));
+    border-radius: 20px 20px 4px 20px;
+    align-self: flex-end;
+    color: white;
+  }
+
+  .bubble-time {
+    font-size: 10px;
+    opacity: 0.5;
+    margin-top: 4px;
+    display: block;
+  }
+
+  /* ── HER HAIR ── */
+  #hair {
+    background: linear-gradient(180deg, #fce4ec 0%, #f8bbd9 100%);
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .hair-art {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-style: italic;
+    color: var(--text-mid);
+    line-height: 2;
+    text-align: center;
+  }
+
+  .hair-art span {
+    display: block;
+    transition: all 0.3s;
+  }
+
+  /* ── SAREE ── */
+  #saree {
+    background: linear-gradient(180deg, #f8bbd9 0%, #e1bee7 100%);
+  }
+
+  /* ── MUSIC PLAYER ── */
+  #music-sec {
+    background: linear-gradient(180deg, #e1bee7 0%, #fce4ec 100%);
+    text-align: center;
+  }
+
+  .player-card {
+    background: linear-gradient(135deg, rgba(255,255,255,0.5), rgba(255,255,255,0.2));
+    backdrop-filter: blur(20px);
+    border: 1.5px solid var(--glass-border);
+    border-radius: 28px;
+    padding: 32px 24px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    width: 100%;
+  }
+
+  .player-disc {
+    width: 120px; height: 120px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--pink-deep), var(--purple-deep));
+    margin: 0 auto 20px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 40px;
+    box-shadow: 0 8px 32px rgba(180,100,140,0.4);
+    animation: spin 8s linear infinite paused;
+  }
+  .player-disc.playing { animation-play-state: running; }
+
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+  }
+
+  .player-song {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-style: italic;
+    color: var(--text-dark);
+    margin-bottom: 4px;
+  }
+
+  .player-artist {
+    font-size: 13px;
+    color: var(--text-mid);
+    margin-bottom: 24px;
+  }
+
+  .player-btn {
+    width: 60px; height: 60px;
+    border-radius: 50%;
+    border: none;
+    background: linear-gradient(135deg, var(--pink-deep), var(--purple-mid));
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    box-shadow: 0 6px 24px rgba(180,100,140,0.4);
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto;
+    transition: transform 0.2s;
+  }
+  .player-btn:active { transform: scale(0.92); }
+
+  .player-note {
+    margin-top: 18px;
+    font-size: 13px;
+    color: var(--text-mid);
+    font-style: italic;
+  }
+
+  /* ── CONFESSION ── */
+  #confession {
+    background: linear-gradient(160deg, #3a1a2e 0%, #5c2a4a 50%, #3a1a2e 100%);
+    text-align: center;
+  }
+
+  .confession-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 38px;
+    font-style: italic;
+    color: var(--pink-soft);
+    line-height: 1.3;
+  }
+
+  .confession-line {
+    font-size: 16px;
+    color: rgba(255,255,255,0.75);
+    line-height: 2;
+    font-style: italic;
+  }
+
+  .confession-accent {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-style: italic;
+    color: var(--pink-mid);
+    line-height: 1.8;
+  }
+
+  /* ── FINAL ── */
+  #final {
+    background: linear-gradient(160deg, #fce4ec 0%, #e1bee7 100%);
+    text-align: center;
+    min-height: 100svh;
+  }
+
+  .final-big {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 52px;
+    font-style: italic;
+    font-weight: 300;
+    color: var(--text-dark);
+    line-height: 1.15;
+  }
+
+  .final-sub {
+    font-size: 15px;
+    color: var(--text-mid);
+    line-height: 1.8;
+    font-style: italic;
+  }
+
+  .final-from {
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--purple-deep);
+    opacity: 0.7;
+    margin-top: 20px;
+  }
+
+  /* ── DEMO IMAGE PLACEHOLDER ── */
+  .demo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background: linear-gradient(135deg, var(--pink-soft), var(--purple-soft));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    color: white;
+  }
+
+  /* image placeholders with gradient + emoji */
+  .img-placeholder {
+    width: 100%;
+    height: 280px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, var(--pink-soft) 0%, var(--purple-soft) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 48px;
+    color: var(--text-mid);
+    box-shadow: 0 12px 40px rgba(180,100,140,0.2);
+    border: 3px solid var(--glass-border);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .img-placeholder::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23e07898' fill-opacity='0.07'%3E%3Ccircle cx='30' cy='30' r='20'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    border-radius: 20px;
+  }
+
+  .img-placeholder-label {
+    font-size: 12px;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text-mid);
+    opacity: 0.6;
+    letter-spacing: 1px;
+    z-index: 1;
+  }
+
+  .img-placeholder span { z-index: 1; }
+
+  .gallery-placeholder {
+    width: 200px;
+    height: 260px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, var(--pink-soft), var(--purple-soft));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 36px;
+    color: var(--text-mid);
+    box-shadow: 0 8px 28px rgba(180,100,140,0.2);
+    border: 2px solid var(--glass-border);
+    flex-shrink: 0;
+    position: relative;
+  }
+
+  .gallery-placeholder-num {
+    position: absolute;
+    top: 10px; left: 10px;
+    background: rgba(255,255,255,0.5);
+    backdrop-filter: blur(6px);
+    border-radius: 50px;
+    padding: 3px 10px;
+    font-size: 11px;
+    color: var(--text-dark);
+    font-weight: 500;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .gallery-placeholder-label {
+    font-size: 11px;
+    color: var(--text-mid);
+    opacity: 0.6;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  /* ── DIVIDER ── */
+  .petal-divider {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    opacity: 0.5;
+  }
+  .petal-divider span { font-size: 12px; }
+
+  /* ── SCROLLBAR ── */
+  ::-webkit-scrollbar { width: 0; }
+
+  /* confetti */
+  .confetti {
+    position: fixed;
+    top: -10px;
+    width: 8px; height: 8px;
+    border-radius: 2px;
+    pointer-events: none;
+    z-index: 9999;
+    animation: confettiFall linear forwards;
+  }
+
+  @keyframes confettiFall {
+    to { transform: translateY(110vh) rotate(720deg); opacity: 0; }
+  }
+</style>
+</head>
+<body>
+
+<!-- MUSIC TOGGLE -->
+<button id="music-btn" onclick="toggleMusic()" title="Toggle music">🎵</button>
+
+<!-- PARTICLES -->
+<div id="particles"></div>
+
+<!-- HIDDEN AUDIO -->
+<!--
+  🎵 HOW TO ADD YOUR SONG:
+  Replace the src below with your MP3 file path, e.g.:
+    <source src="song.mp3" type="audio/mpeg">
+  Or use a hosted link.
+-->
+<audio id="bg-music" loop>
+  <source src="" type="audio/mpeg">
+</audio>
+
+<!-- ═══════════════════════════════════════
+  1. HERO SECTION
+  ════════════════════════════════════════ -->
+<section id="hero">
+  <div class="hero-heart">🌸</div>
+  <p class="hero-date">24th April · Her Special Day</p>
+  <h1 class="hero-title">Happy Birthday,<br><span>Samintha Saba</span> ❤️</h1>
+  <p class="hero-sub">Feels like I found you yesterday…<br>but it's been almost two beautiful years.</p>
+  <button class="btn-start" onclick="document.getElementById('story').scrollIntoView({behavior:'smooth'})">
+    Start the Journey ✨
+  </button>
+</section>
+
+<!-- ═══════════════════════════════════════
+  2. OUR STORY
+  ════════════════════════════════════════ -->
+<section id="story">
+  <div class="sec-wrap">
+    <p class="sec-label reveal">Our Story</p>
+    <h2 class="sec-title reveal">How It All Began</h2>
+
+    <div class="glass-card reveal">
+      <span class="quote-mark">"</span>
+      <p class="sec-body" style="text-align:left; margin-top:-10px;">
+        I don't remember the exact day I found you… maybe it was almost two years ago.
+        But every single time I think of it, it feels like <em>yesterday</em>.
+        <br><br>
+        From the very first moment, your personality pulled me in.
+        I got obsessed — not in a rush, but slowly, deeply, in the most beautiful way.
+        <br><br>
+        It took time to fall in love. But I never got disappointed. Not once.
+      </p>
+    </div>
+
+    <!-- 📸 IMAGE 01: Our Story / First Meeting -->
+    <!-- To replace: change the emoji div below with <img src="photo01.jpg" alt="Our Story"> -->
+    <div class="img-placeholder reveal">
+  <img src="photo01.jpg" alt="Our Story">
+</div>
+
+    <div class="petal-divider reveal"><span>🌸</span><span>✦</span><span>🌸</span></div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+  3. REASONS I FELL IN LOVE
+  ════════════════════════════════════════ -->
+<section id="reasons">
+  <div class="sec-wrap">
+    <p class="sec-label reveal">Ten Reasons</p>
+    <h2 class="sec-title reveal">Why I Fell in Love<br>With You</h2>
+
+    <div class="reasons-grid">
+
+      <!-- Each card: change icon, title, text as you like -->
+      <div class="reason-card reveal">
+        <span class="reason-icon">🌙</span>
+        <span class="reason-title">Your Personality</span>
+        <span class="reason-text">The way you carry yourself — it drew me in from the first moment.</span>
+      </div>
+
+      <div class="reason-card reveal">
+        <span class="reason-icon">✍️</span>
+        <span class="reason-title">Your Poems</span>
+        <span class="reason-text">Words only someone with a beautiful soul could write.</span>
+      </div>
+
+      <div class="reason-card reveal">
+        <span class="reason-icon">🌸</span>
+        <span class="reason-title">Your Cuteness</span>
+        <span class="reason-text">The little things you do without even realizing how adorable you are.</span>
+      </div>
+
+      <div class="reason-card reveal">
+        <span class="reason-icon">💼</span>
+        <span class="reason-title">Your Responsibility</span>
+        <span class="reason-text">You handle life with a grace that inspires me every day.</span>
+      </div>
+
+      <div class="reason-card reveal">
+        <span class="reason-icon">🧠</span>
+        <span class="reason-title">Your Maturity</span>
+        <span class="reason-text">You think, you feel, you understand — beyond your years.</span>
+      </div>
+
+      <div class="reason-card reveal">
+        <span class="reason-icon">🤍</span>
+        <span class="reason-title">Your Patience</span>
+        <span class="reason-text">Even when I got messy, you never made me feel small.</span>
+      </div>
+
+      <div class="reason-card reveal">
+        <span class="reason-icon">💬</span>
+        <span class="reason-title">Your Words</span>
+        <span class="reason-text">You know exactly what to say, and when to say nothing at all.</span>
+      </div>
+
+      <div class="reason-card reveal">
+        <span class="reason-icon">🌊</span>
+        <span class="reason-title">Your Depth</span>
+        <span class="reason-text">There is always more to you than meets the eye.</span>
+      </div>
+
+      <div class="reason-card reveal">
+        <span class="reason-icon">🕊️</span>
+        <span class="reason-title">Your Kindness</span>
+        <span class="reason-text">Quiet, sincere, and real — the kind that stays with you.</span>
+      </div>
+
+      <div class="reason-card reveal">
+        <span class="reason-icon">💫</span>
+        <span class="reason-title">Just You</span>
+        <span class="reason-text">No single reason is enough. It's all of you, all at once.</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+  4. REASONS I RESPECT YOU
+  ════════════════════════════════════════ -->
+<section id="respect">
+  <div class="sec-wrap">
+    <p class="sec-label reveal">Deeply</p>
+    <h2 class="sec-title reveal">Why I Respect You</h2>
+
+    <div class="glass-card reveal">
+      <div class="respect-line">
+        <div class="respect-dot"></div>
+        <p class="respect-text">You never disappointed me. Not even once.</p>
+      </div>
+      <div class="respect-line">
+        <div class="respect-dot"></div>
+        <p class="respect-text">Even when I was the problem, you stayed strong and steady.</p>
+      </div>
+      <div class="respect-line">
+        <div class="respect-dot"></div>
+        <p class="respect-text">You are honest, even when it's hard.</p>
+      </div>
+      <div class="respect-line">
+        <div class="respect-dot"></div>
+        <p class="respect-text">You hold yourself together in ways most people never could.</p>
+      </div>
+      <div class="respect-line">
+        <div class="respect-dot"></div>
+        <p class="respect-text">You are someone I truly, deeply, genuinely respect.</p>
+      </div>
+    </div>
+
+    <!-- 📸 IMAGE 02: Respect section -->
+    
+    
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+  5. WHAT I LOVE MOST
+  ════════════════════════════════════════ -->
+<section id="lovemost">
+  <div class="sec-wrap">
+    <p class="sec-label reveal">Most of all</p>
+    <h2 class="sec-title reveal">What I Love<br>Most About You</h2>
+
+    <div style="width:100%; padding: 10px 0;" class="reveal">
+      <div class="love-item">The way you understand without words.</div>
+      <div class="love-item">The way you stay, even when things get hard.</div>
+      <div class="love-item">The way you love, quietly and completely.</div>
+      <div class="love-item">The way your eyes carry a thousand stories.</div>
+      <div class="love-item">The way you make ordinary moments feel like poetry.</div>
+    </div>
+
+    <!-- 📸 IMAGE 03: Love most section -->
+    <div class="img-placeholder reveal">
+  <img src="photo03.jpg" alt="Our Story">
+</div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+  6. FIRST MEET
+  ════════════════════════════════════════ -->
+<section id="firstmeet">
+  <div class="sec-wrap" style="background: linear-gradient(180deg, #fce4ec 0%, #f3e5f5 100%);">
+    <p class="sec-label reveal">Chapter One</p>
+    <h2 class="sec-title reveal">The First Time<br>We Met</h2>
+
+    <!-- 📸 IMAGE 04: First Meet -->
+    <div class="img-placeholder reveal">
+  <img src="photo04.jpg" alt="Our Story">
+</div>
+
+    <div class="glass-card reveal">
+      <p class="sec-body" style="font-style:italic;">
+        "The first time we met… a moment I will never forget.
+        Something shifted in me that day — quietly, without warning.
+        And I have never been the same since."
+      </p>
+    </div>
+
+    <!-- 📸 IMAGE 05: First meet extra -->
+    <div class="img-placeholder reveal">
+  <img src="photo05.jpg" alt="Our Story">
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════
+  7. FIRST TOUCH MEMORY
+  ════════════════════════════════════════ -->
+<section id="firsttouch" style="background: linear-gradient(180deg, #f3e5f5 0%, #fce4ec 100%);">
+  <div class="sec-wrap">
+    <p class="sec-label reveal">A Memory</p>
+    <h2 class="sec-title reveal">That Moment Still<br>Lives in Me</h2>
+
+    <!-- 📸 IMAGE 06: First Touch / Special Memory -->
+    <div class="img-placeholder reveal">
+  <img src="photo06.jpg" alt="Our Story">
+</div>
+
+    <div class="glass-card reveal" style="text-align:center; background: linear-gradient(135deg, rgba(255,255,255,0.4), rgba(255,200,220,0.2));">
+      <p class="sec-body" style="font-style:italic; font-size:17px;">
+        "That moment still lives in my heart.<br>
+        Warm. Real. Unforgettable."
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+  8. VIRTUAL ROMANCE
+  ════════════════════════════════════════ -->
+<section id="romance">
+  <div class="sec-wrap">
+    <p class="sec-label reveal">Us</p>
+    <h2 class="sec-title reveal">Our Little World<br>of Words</h2>
+    <p class="sec-body reveal" style="font-style:italic; margin-bottom:8px;">
+      Even through a screen, every word felt like a touch.
+    </p>
+
+    <div class="chat-wrap reveal">
+
+      <div style="align-self:flex-start; display:flex; flex-direction:column; gap:4px;">
+        <div class="bubble bubble-her">Good morning ☀️</div>
+        <span class="bubble-time" style="margin-left:4px;">9:04 AM</span>
+      </div>
+
+      <div style="align-self:flex-end; display:flex; flex-direction:column; align-items:flex-end; gap:4px;">
+        <div class="bubble bubble-me">Good morning 🌸 Was thinking about you</div>
+        <span class="bubble-time" style="margin-right:4px; text-align:right;">9:06 AM</span>
+      </div>
+
+      <div style="align-self:flex-start; display:flex; flex-direction:column; gap:4px;">
+        <div class="bubble bubble-her">Aww 🥺 Miss you</div>
+        <span class="bubble-time" style="margin-left:4px;">9:08 AM</span>
+      </div>
+
+      <div style="align-self:flex-end; display:flex; flex-direction:column; align-items:flex-end; gap:4px;">
+        <div class="bubble bubble-me">Miss you more ❤️ Take care of yourself today</div>
+        <span class="bubble-time" style="margin-right:4px; text-align:right;">9:09 AM</span>
+      </div>
+
+      <div style="align-self:flex-start; display:flex; flex-direction:column; gap:4px;">
+        <div class="bubble bubble-her">You too 💕 Good night when the time comes</div>
+        <span class="bubble-time" style="margin-left:4px;">9:10 AM</span>
+      </div>
+
+      <div style="align-self:flex-end; display:flex; flex-direction:column; align-items:flex-end; gap:4px;">
+        <div class="bubble bubble-me">Good night in advance… 🌙 always beside you</div>
+        <span class="bubble-time" style="margin-right:4px; text-align:right;">9:11 AM</span>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+  9. HER HAIR
+  ════════════════════════════════════════ -->
+<section id="hair">
+  <div class="sec-wrap" style="background: linear-gradient(180deg, #fce4ec 0%, #f8bbd9 100%);">
+    <p class="sec-label reveal">The Little Things</p>
+    <h2 class="sec-title reveal">Her Hair</h2>
+
+    <!-- 📸 IMAGE 07: Her hair -->
+    <div class="img-placeholder reveal">
+  <img src="photo07.jpg" alt="Our Story">
+</div>
+
+    <div class="glass-card reveal" style="text-align:center;">
+      <div class="hair-art">
+        <span>Your hair in the wind…</span>
+        <span>soft, wild, beautiful.</span>
+        <span>One of the little things</span>
+        <span>I love the most about you.</span>
+      </div>
+    </div>
+
+    <!-- 📸 IMAGE 07: Her hair -->
+    <div class="img-placeholder reveal">
+  <img src="photo08.jpg" alt="Our Story">
+</div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+  10. HER IN SAREE
+  ════════════════════════════════════════ -->
+<section id="saree">
+  <div class="sec-wrap" style="background: linear-gradient(180deg, #f8bbd9 0%, #e1bee7 100%);">
+    <p class="sec-label reveal">My Favourite</p>
+    <h2 class="sec-title reveal">You in a Saree</h2>
+
+    <!-- 📸 IMAGE 09: Her in Saree -->
+      <div class="img-placeholder reveal">
+  <img src="photo09.jpg" alt="Our Story">
+</div>
+
+    <div class="glass-card reveal" style="text-align:center; margin-top:4px;">
+      <p class="sec-body" style="font-family:'Cormorant Garamond', serif; font-style:italic; font-size:20px; color: var(--text-dark);">
+        "You in a saree…<br>my favourite version of you.<br>
+        <span style="font-size:15px; color: var(--text-mid);">Elegant. Graceful. Breathtaking.</span>"
+      </p>
+    </div>
+
+    <!-- 📸 IMAGE 10: Saree extra -->
+    <div class="img-placeholder reveal">
+  <img src="photo10.jpg" alt="Our Story">
+</div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+  11. PHOTO GALLERY
+  ════════════════════════════════════════ -->
+<section id="gallery">
+  <div class="sec-wrap">
+    <p class="sec-label reveal">Gallery</p>
+    <h2 class="sec-title reveal">Our Moments</h2>
+    <p class="sec-body reveal" style="font-style:italic;">Swipe to explore →</p>
+
+    <!--
+      📸 GALLERY PHOTOS — gallery01.jpg through gallery12.jpg
+      To replace: swap each .gallery-placeholder div with:
+        <div class="gallery-item">
+  <img src="gallery01.jpg" alt="Memory 1">
+  <span class="gallery-num">01</span>
+</div>
+      Add or remove items as needed!
+    -->
+    <div class="gallery-scroll reveal">
+
+      <div class="gallery-item">
+  <img src="gallery01.jpg" alt="Memory 1">
+  <span class="gallery-num">01</span>
+</div>
+
+     <div class="gallery-scroll reveal">
+
+      <div class="gallery-item">
+  <img src="gallery02.jpg" alt="Memory 1">
+  <span class="gallery-num">01</span>
+</div>
+
+      <div class="gallery-scroll reveal">
+
+      <div class="gallery-item">
+  <img src="gallery03.jpg" alt="Memory 1">
+  <span class="gallery-num">01</span>
+</div>
+
+      <div class="gallery-placeholder" style="background: linear-gradient(135deg, #f9c6d0, #f8bbd9);">
+        <span class="gallery-placeholder-num">04</span>
+        <span>🌹</span>
+        <span class="gallery-placeholder-label">gallery04.jpg</span>
+      </div>
+
+      <div class="gallery-placeholder" style="background: linear-gradient(135deg, #f8bbd9, #b890e0);">
+        <span class="gallery-placeholder-num">05</span>
+        <span>✨</span>
+        <span class="gallery-placeholder-label">gallery05.jpg</span>
+      </div>
+
+      <div class="gallery-placeholder" style="background: linear-gradient(135deg, #b890e0, #f9c6d0);">
+        <span class="gallery-placeholder-num">06</span>
+        <span>🎀</span>
+        <span class="gallery-placeholder-label">gallery06.jpg</span>
+      </div>
+
+      <div class="gallery-placeholder" style="background: linear-gradient(135deg, #f9c6d0, #d9b8f0);">
+        <span class="gallery-placeholder-num">07</span>
+        <span>💜</span>
+        <span class="gallery-placeholder-label">gallery07.jpg</span>
+      </div>
+
+      <div class="gallery-placeholder" style="background: linear-gradient(135deg, #d9b8f0, #f8bbd9);">
+        <span class="gallery-placeholder-num">08</span>
+        <span>🥀</span>
+        <span class="gallery-placeholder-label">gallery08.jpg</span>
+      </div>
+
+      <div class="gallery-placeholder" style="background: linear-gradient(135deg, #f8bbd9, #f9c6d0);">
+        <span class="gallery-placeholder-num">09</span>
+        <span>🌙</span>
+        <span class="gallery-placeholder-label">gallery09.jpg</span>
+      </div>
+
+      <div class="gallery-placeholder" style="background: linear-gradient(135deg, #f9c6d0, #b890e0);">
+        <span class="gallery-placeholder-num">10</span>
+        <span>⭐</span>
+        <span class="gallery-placeholder-label">gallery10.jpg</span>
+      </div>
+
+      <div class="gallery-placeholder" style="background: linear-gradient(135deg, #b890e0, #f9c6d0);">
+        <span class="gallery-placeholder-num">11</span>
+        <span>🫧</span>
+        <span class="gallery-placeholder-label">gallery11.jpg</span>
+      </div>
+
+      <div class="gallery-placeholder" style="background: linear-gradient(135deg, #f9c6d0, #d9b8f0);">
+        <span class="gallery-placeholder-num">12</span>
+        <span>🌺</span>
+        <span class="gallery-placeholder-label">gallery12.jpg</span>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+  12. FAVOURITE SONG
+  ════════════════════════════════════════ -->
+<section id="music-sec">
+  <div class="sec-wrap">
+    <p class="sec-label reveal">For You</p>
+    <h2 class="sec-title reveal">Your Favourite Song</h2>
+
+    <div class="player-card reveal" id="player-card">
+      <div class="player-disc" id="player-disc">🎵</div>
+      <!--
+        🎵 SONG DETAILS — change these:
+      -->
+      <p class="player-song">Song Title Here</p>
+      <p class="player-artist">Artist Name</p>
+      <button class="player-btn" onclick="togglePlayer()" id="play-btn">▶</button>
+      <p class="player-note">"This song reminds me of you… every single time."</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+  13. EMOTIONAL CONFESSION
+  ════════════════════════════════════════ -->
+<section id="confession">
+  <div class="sec-wrap">
+    <p class="sec-label reveal" style="color: rgba(255,200,220,0.6);">From My Heart</p>
+    <h2 class="confession-title reveal">I Love You,<br>Saba.</h2>
+
+    <div class="glass-card reveal" style="background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.15);">
+      <p class="confession-line">
+        Yes, maybe life won't take us where we imagined.<br>
+        Maybe we won't get married.<br>
+        But that doesn't change what I feel.
+      </p>
+    </div>
+
+    <div class="reveal">
+      <p class="confession-accent">
+        "I love you.<br>
+        And I know you love me.<br>
+        And that is enough."
+      </p>
+    </div>
+
+    <div class="glass-card reveal" style="background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.15);">
+      <p class="confession-line">
+        I just want you beside me…<br>
+        in any way life allows.<br>
+        As my <strong style="color: var(--pink-mid);">forever good wisher.</strong><br>
+        The one I always want near.
+      </p>
+    </div>
+
+    <!-- 📸 IMAGE 11: Confession / emotional -->
+    <div class="img-placeholder reveal">
+  <img src="photo11.jpg" alt="Our Story">
+</div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+  14. FINAL MESSAGE
+  ════════════════════════════════════════ -->
+<section id="final">
+  <div class="sec-wrap" style="text-align:center; gap:20px;">
+    <div class="petal-divider reveal" style="opacity:0.8; justify-content:center;">
+      <span style="font-size:20px;">🌸</span>
+      <span>✦</span>
+      <span style="font-size:20px;">🌸</span>
+    </div>
+
+    <h2 class="final-big reveal">Happy Birthday,<br><span style="color:var(--pink-deep);">Saba</span> ❤️</h2>
+
+    <p class="final-sub reveal">
+      Stay with me…<br>
+      in any way life allows.<br>
+      I will always be here —<br>
+      cheering for you, caring for you,<br>
+      loving you quietly.
+    </p>
+
+    <!-- 📸 IMAGE 12: Final photo -->
+    <div class="img-placeholder reveal">
+  <img src="photo12.jpg" alt="Our Story">
+</div>
+
+    <p class="final-from reveal">From someone who will always care for you.</p>
+
+    <div style="font-size:32px; margin-top:10px;" class="reveal">🌸 💜 🌸</div>
+
+  </div>
+</section>
+
+<script>
+// ── PARTICLES ──
+const emojis = ['🌸','💕','✨','🌷','💜','🌺','💫','🩷','🌹','🫧'];
+const container = document.getElementById('particles');
+for (let i = 0; i < 18; i++) {
+  const p = document.createElement('div');
+  p.className = 'particle';
+  p.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+  p.style.left = Math.random() * 100 + '%';
+  p.style.animationDuration = (6 + Math.random() * 10) + 's';
+  p.style.animationDelay = (Math.random() * 8) + 's';
+  p.style.fontSize = (10 + Math.random() * 12) + 'px';
+  container.appendChild(p);
+}
+
+// ── SCROLL REVEAL ──
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.15 });
+reveals.forEach(r => observer.observe(r));
+
+// love items observer
+const loveItems = document.querySelectorAll('.love-item');
+const loveObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) e.target.classList.add('visible');
+  });
+}, { threshold: 0.2 });
+loveItems.forEach(i => loveObs.observe(i));
+
+// ── MUSIC ──
+const music = document.getElementById('bg-music');
+const musicBtn = document.getElementById('music-btn');
+let playing = false;
+
+function toggleMusic() {
+  if (playing) {
+    music.pause();
+    musicBtn.textContent = '🎵';
+    playing = false;
+  } else {
+    music.play().catch(() => {});
+    musicBtn.textContent = '⏸';
+    playing = true;
+  }
+}
+
+// ── PLAYER ──
+const disc = document.getElementById('player-disc');
+const playBtn = document.getElementById('play-btn');
+let playerOn = false;
+
+function togglePlayer() {
+  playerOn = !playerOn;
+  playBtn.textContent = playerOn ? '⏸' : '▶';
+  if (playerOn) {
+    disc.classList.add('playing');
+    music.play().catch(() => {});
+    musicBtn.textContent = '⏸';
+    playing = true;
+  } else {
+    disc.classList.remove('playing');
+    music.pause();
+    musicBtn.textContent = '🎵';
+    playing = false;
+  }
+}
+
+// ── CONFETTI ON LOAD ──
+function burst() {
+  const colors = ['#f9c6d0','#d9b8f0','#f2a0b8','#b890e0','#fce4ec','#fff'];
+  for (let i = 0; i < 30; i++) {
+    const c = document.createElement('div');
+    c.className = 'confetti';
+    c.style.left = Math.random() * 100 + 'vw';
+    c.style.background = colors[Math.floor(Math.random() * colors.length)];
+    c.style.width = (4 + Math.random() * 8) + 'px';
+    c.style.height = (4 + Math.random() * 8) + 'px';
+    c.style.borderRadius = Math.random() > 0.5 ? '50%' : '2px';
+    c.style.animationDuration = (2 + Math.random() * 3) + 's';
+    c.style.animationDelay = (Math.random() * 2) + 's';
+    document.body.appendChild(c);
+    setTimeout(() => c.remove(), 5000);
+  }
+}
+window.addEventListener('load', () => setTimeout(burst, 600));
+</script>
+
+</body>
+</html>
